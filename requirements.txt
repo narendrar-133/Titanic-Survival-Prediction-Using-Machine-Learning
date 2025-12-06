@@ -1,0 +1,8 @@
+The following are the required python libraries to implement/deploy the attached models
+1. lightgbm
+2. scikit-learn
+3. numpy
+4. pandas
+5. scipy
+6. joblib
+7. matplotlib
