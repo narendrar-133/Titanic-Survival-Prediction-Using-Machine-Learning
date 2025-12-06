@@ -45,3 +45,55 @@ data/train.csv
 ## 🧠 Models Included
 
 Trained models are stored in:
+
+models/
+├── inbuilt_LGBM_classifier_model.pkl
+└── custom_LGBM_classifier_model.pkl
+
+hey can be loaded directly without retraining.
+
+---
+
+## 🗂️ Repository Structure
+
+project/
+│
+├── data/
+│ └── train.csv
+│
+├── models/
+│ ├── inbuilt_LGBM_classifier_model.pkl
+│ └── custom_LGBM_classifier_model.pkl
+│
+├── notebooks/
+│ └── training.ipynb
+│
+├── requirements.txt
+└── README.md
+
+---
+
+## 🚀 How to Use
+
+### Install dependencies:
+pip install -r requirements.txt
+
+
+### Load inbuilt LGBM model:
+```python
+import joblib
+model = joblib.load("models/lgbm_inbuilt_model.pkl")
+predictions = model.predict(X_test)
+```
+###Load custom model:
+```python
+import pickle
+with open("models/custom_lgbm_model.pkl", "rb") as f:
+    custom_model = pickle.load(f)
+
+preds = custom_model.predict(X_test)
+```
+
+##🙌 Author
+
+This project demonstrates both practical machine learning using LightGBM and a deeper understanding of boosting through a custom model. Feel free to explore, use, or contribute!
